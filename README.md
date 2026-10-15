@@ -1,7 +1,7 @@
 # ⚡ KINETICA — Biomechanics & High-Performance Athletic Club
 
 <p align="center">
-  <img src="public/assets/images/logo.svg" alt="Kinetica Logo" width="120" height="auto" />
+  <img src="public/assets/images/logo.svg" alt="Kinetica Logo" width="340" height="auto" />
 </p>
 
 <p align="center">
