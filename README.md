@@ -59,11 +59,19 @@ This repository contains the full end-to-end web software suite:
 - **Integrated Purchase Funnel:** Selecting a plan routes new users through registration directly to checkout with auto-filled cart items, preventing drop-offs.
 - **Lead Generation Modals:** Capture prospective athletes interested in free biomechanics diagnostic webinars or trial workouts directly into the CRM funnel.
 
+<p align="center">
+  <img src="docs/screenshots/landing-hero.png" alt="Kinetica High-Performance Landing Hero" width="95%" />
+</p>
+
 ### 2. Athlete Self-Service Portal (`/dashboard`)
 - **Virtual NFC Pass:** Dynamic token generation (`NFC-XXXX`) with barcode and QR representations for biometric turnstile entry.
 - **Membership Status & Freeze Engine:** Real-time indicator of active tier, days remaining, cryo credits, and guest passes. Members can pause/unpause their pass with automated validation against annual freeze quotas.
 - **Class Booking & Quota Tracking:** Schedule viewer for group workouts (Kinetic Chain, Olympic Lifting, Cryo Breathwork) with quota counter and one-click cancellation.
 - **Digital Video Course Vault:** Interactive training programs unlocked for registered athletes.
+
+<p align="center">
+  <img src="docs/screenshots/member-dashboard.png" alt="Athlete Self-Service Dashboard & Access Pass" width="95%" />
+</p>
 
 ### 3. Sandbox Checkout Gateway Simulator (`/checkout`)
 - **Real-Time Payment Sandbox:** Simulates payment processing for testing without requiring live merchant credentials.
@@ -76,6 +84,14 @@ This repository contains the full end-to-end web software suite:
 - **Hardware Turnstile Simulator (`/crm/turnstiles`):** Realistic access control gate emulator testing NFC card swipes and member IDs against active memberships, frozen states, or expired subscriptions with visual indicators and logs.
 - **Training Schedule & Roster (`/crm/schedule`):** Capacity management for group sessions, real-time participant headcounts, and receptionist check-in actions.
 - **Trainer Payroll Engine (`/crm/payroll`):** Transparent payroll computation supporting hybrid salaries (base stipend + variable per-session rate). Includes status approval (`Calculated` ➔ `Approved` ➔ `Paid`).
+
+<p align="center">
+  <img src="docs/screenshots/crm-overview.png" alt="CRM Executive Telemetry & Real-Time Turnstile Stream" width="95%" />
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/crm-athletes.png" alt="Athlete 360 & Retention Directory" width="95%" />
+</p>
 
 ---
 
