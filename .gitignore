@@ -1,0 +1,51 @@
+# ==============================================================================
+# Kinetica Gym - Git Ignore Rules
+# ==============================================================================
+
+# Environment Configurations
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# OSPanel (Open Server Panel)
+.osp/
+*.osp
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Logs & Framework Storage
+storage/logs/*.log
+storage/uploads/*
+!storage/logs/.gitkeep
+!storage/uploads/.gitkeep
+*.log
+
+# IDEs & Code Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.user
+*.userosv
+*.sln.docstates
+
+# Operating System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary / Scratch Files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.phpunit.result.cache

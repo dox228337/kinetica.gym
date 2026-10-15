@@ -1,0 +1,5 @@
+/* Kinetica Gym - Supplemental Utilities & Project Extensions */
+:root {
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+}

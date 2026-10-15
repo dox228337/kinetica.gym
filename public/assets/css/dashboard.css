@@ -1,0 +1,1044 @@
+/* ==========================================================================
+   KINETICA DASHBOARD & PORTAL STYLES (CLIENT & TRAINER)
+   ========================================================================== */
+
+.dashboard-body {
+    background-color: #07080b;
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+.dashboard-sidebar {
+    width: 280px;
+    background: #0c0e14;
+    border-right: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+    flex-shrink: 0;
+    transition: transform var(--transition-fast);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 20px;
+}
+
+.portal-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--accent-lime);
+    background: rgba(212, 255, 0, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.sidebar-user-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.sidebar-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--gradient-brand);
+    color: #000;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sidebar-user-info {
+    overflow: hidden;
+}
+
+.sidebar-user-name {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.92rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-role-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-family: var(--font-mono);
+    margin-top: 2px;
+}
+
+.badge-coach {
+    color: var(--accent-lime);
+}
+
+.badge-client {
+    color: var(--accent-cyan);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-grow: 1;
+}
+
+.nav-section-title {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    margin: 16px 0 6px 10px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.sidebar-link.active {
+    background: rgba(212, 255, 0, 0.08);
+    color: var(--accent-lime);
+    border-left: 3px solid var(--accent-lime);
+}
+
+.sidebar-link-icon {
+    font-size: 1.1rem;
+}
+
+.logout-link {
+    color: #f87171;
+}
+
+.logout-link:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.sidebar-footer {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   MAIN WRAPPER & TOPBAR
+   ========================================================================== */
+.dashboard-main-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.dashboard-topbar {
+    height: 70px;
+    background: rgba(12, 14, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.sidebar-toggle-btn {
+    display: none;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.topbar-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logout-btn-top {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+}
+
+.dashboard-content {
+    padding: 36px 32px;
+    flex-grow: 1;
+}
+
+/* ==========================================================================
+   HEADER AREA & TITLES
+   ========================================================================== */
+.dashboard-header-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.dashboard-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent-lime);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.dashboard-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+}
+
+.dashboard-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.header-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   MEMBERSHIP OVERVIEW CARD (CLIENT)
+   ========================================================================== */
+.membership-overview-card {
+    background: linear-gradient(135deg, rgba(18, 22, 33, 0.95) 0%, rgba(13, 16, 24, 0.95) 100%);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.featured-border {
+    border-color: rgba(212, 255, 0, 0.35);
+    box-shadow: 0 0 30px rgba(212, 255, 0, 0.1);
+}
+
+.membership-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.membership-badge-live {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent-lime);
+    background: rgba(212, 255, 0, 0.1);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: 8px;
+}
+
+.membership-plan-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.membership-price-tag {
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+}
+
+.membership-timer-box, .timer-box {
+    text-align: right;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+}
+
+.timer-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--accent-lime);
+    line-height: 1;
+}
+
+.timer-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+}
+
+.membership-progress-wrap {
+    margin-bottom: 28px;
+}
+
+.progress-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.progress-bar-track {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--gradient-brand);
+    border-radius: var(--radius-full);
+}
+
+.membership-quotas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.quota-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.quota-icon {
+    font-size: 1.8rem;
+}
+
+.quota-val {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: #fff;
+}
+
+.quota-name {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.freeze-action-item {
+    justify-content: space-between;
+}
+
+.freeze-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+/* Free Lead Vault Card */
+.free-lead-vault-card {
+    background: linear-gradient(135deg, rgba(24, 29, 44, 0.9) 0%, rgba(14, 18, 28, 0.9) 100%);
+    border: 1px dashed rgba(212, 255, 0, 0.4);
+    border-radius: var(--radius-xl);
+    padding: 36px;
+    margin-bottom: 32px;
+}
+
+.free-vault-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent-lime);
+    background: rgba(212, 255, 0, 0.1);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: 12px;
+}
+
+.free-lead-vault-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.free-lead-vault-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    max-width: 720px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.free-upgrade-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.free-voucher-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-medium);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   DASHBOARD 2-COLUMN GRID & CARDS
+   ========================================================================== */
+.dashboard-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.dash-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 30px;
+}
+
+.dash-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.dash-card-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.dash-card-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.dash-status-dot {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-lime);
+}
+
+/* Mini Courses List */
+.courses-mini-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mini-course-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    transition: background var(--transition-fast);
+}
+
+.mini-course-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mini-course-thumb {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(212, 255, 0, 0.15);
+    color: var(--accent-lime);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.mini-course-info {
+    flex-grow: 1;
+}
+
+.mini-course-info strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.92rem;
+    color: #fff;
+}
+
+.mini-course-info small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Turnstile Visits Table */
+.visits-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.visits-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.visits-table th {
+    text-align: left;
+    padding: 10px 12px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.visits-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: #e2e8f0;
+}
+
+.access-pill {
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.facility-status-box {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* ==========================================================================
+   TRAINER & STAFF DASHBOARD SPECIFICS
+   ========================================================================== */
+.duty-status-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #4ade80;
+}
+
+.duty-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 8px #4ade80;
+}
+
+/* Trainer Payroll Card */
+.trainer-payroll-card {
+    background: linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(12, 16, 24, 0.95) 100%);
+    border: 1px solid rgba(212, 255, 0, 0.25);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.payroll-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.payroll-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--accent-lime);
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+.payroll-card-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.payout-due-badge {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-medium);
+    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    text-align: right;
+}
+
+.payout-due-badge span {
+    display: block;
+    font-size: 0.88rem;
+    color: #fff;
+}
+
+.payout-due-badge small {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--accent-lime);
+    font-family: var(--font-mono);
+}
+
+.payroll-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.payroll-metric-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 20px 16px;
+}
+
+.highlighted-metric {
+    border-color: rgba(212, 255, 0, 0.35);
+    background: rgba(212, 255, 0, 0.04);
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.metric-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.metric-subtext {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 6px;
+}
+
+.metric-iban {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--accent-cyan);
+    word-break: break-all;
+    line-height: 1.3;
+}
+
+/* Trainer Schedule List */
+.trainer-schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.schedule-item-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 16px;
+}
+
+.schedule-time-box {
+    min-width: 110px;
+}
+
+.schedule-time-box strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.schedule-zone {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--accent-lime);
+    font-family: var(--font-mono);
+}
+
+.schedule-client-info {
+    flex-grow: 1;
+}
+
+.client-name {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: #fff;
+}
+
+.session-type {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.session-notes {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.completed-check {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4ade80;
+}
+
+.badge-pulse {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    background: rgba(0, 240, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Trainer Clients Roster */
+.clients-roster-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.client-roster-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 14px;
+}
+
+.client-avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-brand);
+    color: #000;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.client-roster-details {
+    flex-grow: 1;
+}
+
+.client-row-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.client-row-title strong {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.client-plan-pill {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent-lime);
+    background: rgba(212, 255, 0, 0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.client-goal-text {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.client-progress-row {
+    display: flex;
+    gap: 16px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.progress-val {
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   CLASSES SCHEDULE VIEW
+   ========================================================================== */
+.classes-schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.class-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.class-category-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-lime);
+    background: rgba(212, 255, 0, 0.08);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.class-spots-left {
+    font-size: 0.75rem;
+    color: var(--accent-cyan);
+}
+
+.class-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.class-coach, .class-zone {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.class-time {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #fff;
+    margin: 12px 0 20px;
+}
+
+.class-action {
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   DIGITAL NFC PASS VISUAL
+   ========================================================================== */
+.nfc-card-visual {
+    background: linear-gradient(135deg, #1c2233 0%, #0d1017 100%);
+    border: 2px solid var(--accent-lime);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    margin: 24px 0 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nfc-card-top {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.nfc-badge-role {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-lime);
+}
+
+.nfc-chip-icon {
+    font-size: 2.2rem;
+    margin: 16px 0;
+    text-align: left;
+}
+
+.nfc-code-display {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent-lime);
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nfc-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.nfc-status-note {
+    font-size: 0.78rem;
+    color: var(--accent-cyan);
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (DASHBOARD)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .dashboard-sidebar {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+    }
+    .dashboard-sidebar.open {
+        left: 0;
+    }
+    .sidebar-toggle-btn {
+        display: block;
+    }
+    .payroll-metrics-grid,
+    .membership-quotas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dashboard-grid-2,
+    .classes-schedule-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-topbar,
+    .dashboard-content {
+        padding: 16px 20px;
+    }
+    .payroll-metrics-grid,
+    .membership-quotas-grid {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-header-area {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
